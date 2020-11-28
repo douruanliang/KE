@@ -32,6 +32,14 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
+    splits {
+        abi {
+            enable true
+            reset()
+            include 'x86', 'x86_64', 'armeabi-v7a', 'armeabi'
+            universalApk false
+        }
+    }
 }
 
 dependencies {
@@ -87,6 +95,13 @@ dependencies {
     implementation 'tv.danmaku.ijk.media:ijkplayer-armv7a:0.8.4'
     implementation 'tv.danmaku.ijk.media:ijkplayer-armv5:0.8.4'
     implementation 'tv.danmaku.ijk.media:ijkplayer-x86:0.8.4'
+    implementation 'tv.danmaku.ijk.media:ijkplayer-exo:0.8.4'
+
+
+//    api rootProject.ext.deps["ijkplayer-armv7a"]
+//      api rootProject.ext.deps["ijkplayer-exo"]
+    // 修改后的
+
     //flowlayout
     implementation 'com.zhy:flowlayout-lib:1.0.3'
 }

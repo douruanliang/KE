@@ -23,7 +23,7 @@ class WebViewActivity : BaseInjectActivity<SectionDetailPresenter>(), SectionDet
 
     override fun getLayoutId(): Int = R.layout.activity_section_detail
 
-    //override fun initInject() = activityComponent.inject(this)
+    override fun initInject() = activityComponent.inject(this)
 
     override fun initPresenter() = mPresenter.attachView(this)
 

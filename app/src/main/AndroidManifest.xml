@@ -23,7 +23,7 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.KE">
+        android:theme="@style/BaseAppTheme">
         <activity android:name=".education.ui.activity.app.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -31,6 +31,19 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".education.ui.activity.app.SplashActivity" />
+        <activity android:name=".education.ui.activity.app.WebViewActivity" />
+        <activity android:name=".education.ui.activity.app.ChoosePhaseActivity"/>
+        <activity android:name=".education.ui.activity.mine.CacheRecordActivity"/>
+        <activity android:name=".education.ui.activity.course.VideoPlayerActivity"
+            android:configChanges="orientation|screenSize|smallestScreenSize|keyboard|keyboardHidden|navigation"
+            android:exported="false"
+            android:label="@string/app_name"
+            android:launchMode="singleTop"
+            android:screenOrientation="landscape"
+            android:theme="@style/Fullscreen"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <service android:name=".education.widget.NetworkService" />
     </application>
 
 </manifest>
